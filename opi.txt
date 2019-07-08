@@ -1,2 +1,4 @@
 orangepi temp
 cat /sys/class/thermal/thermal_zone0/temp
+
+wget -c -r -np -k -L -p -e "https_proxy=http://65.52.174.40:80" https://raw.githubusercontent.com/lyilig/gitm/master/opi.txt
