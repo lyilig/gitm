@@ -44,3 +44,9 @@ sync
 watch -n1 iostat
 从u盘启动安装Windows系统
 现在你已经可以从u盘启动来安装Windows了。
+
+ms-sys 安装
+http://ms-sys.sourceforge.net/
+
+
+
