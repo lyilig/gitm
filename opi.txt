@@ -19,7 +19,7 @@ http://www.bankaiyuan.com/t/252
 
 设置usb设备/dev/sdb的 /dev/sdb1为启动分区
 
-> cfdisk /dev/sdb 或 fdisk  /dev/sdb (partition type 7, and bootable flag)
+> cfdisk /dev/sdb 或。。
 
 u盘分区格式化
 
