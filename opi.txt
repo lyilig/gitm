@@ -6,3 +6,41 @@ wget -c -r -np -k -L -p -e "https_proxy=http://65.52.174.40:80" https://raw.gith
 方法一、在环境变量中设置代理
 
 export http_proxy=http://127.0.0.1:8087
+
+
+
+
+
+××××××××××××
+http://www.bankaiyuan.com/t/252
+
+
+注意：如果看到u盘(/run/media/alfer/u8)挂载在/dev/sdb设备下，则需要先将其卸载；如果此处看不到usb 设备，则要用　fdisk 工具查看。
+
+设置usb设备/dev/sdb的 /dev/sdb1为启动分区
+
+> cfdisk /dev/sdb 或 fdisk  /dev/sdb (partition type 7, and bootable flag)
+
+u盘分区格式化
+
+格式化分区sdb1为ntfs格式：
+
+> mkfs.ntfs  -f /dev/sdb1
+
+利用ms-sys写入mbr信息到u盘以引导win7：
+
+> ms-sys  -7 /dev/sdb
+
+其中的-7参数指Win7 MBR，sdX指的是U盘对应的盘符。
+
+将ISO镜像文件写入到u盘：
+
+mount -o loop win7.iso /mnt/iso
+mount /dev/sdb1 /mnt/usb
+cp -r /mnt/iso/* /mnt/usb/  
+sync  
+监控写入状态：
+
+watch -n1 iostat
+从u盘启动安装Windows系统
+现在你已经可以从u盘启动来安装Windows了。
