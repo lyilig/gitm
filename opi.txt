@@ -54,3 +54,20 @@ http://ms-sys.sourceforge.net/
 https://blog.csdn.net/bmbm546/article/details/6875972
 https://www.cnblogs.com/crazylqy/p/6901358.html
 https://blog.csdn.net/lwc5411117/article/details/79417102
+
+
+an zhuang ss
+
+https://github.com/shadowsocks/shadowsocks-libev
+配置并启动该服务
+# Edit the configuration file
+sudo vim /etc/shadowsocks/config.json
+
+ 使用命令sslocal -c ~/shadowsocks.json就可以启动shadowsocks啦。
+https://www.cnblogs.com/dereen/p/ubuntu_ss.html
+
+
+
+# Start the service
+sudo /etc/init.d/shadowsocks-libev start    # for sysvinit, or
+sudo systemctl start shadowsocks-libev      # for systemd
